@@ -12,6 +12,8 @@
   <body>
     <div id="app">
     </div>
+    <!-- query parameter -->
+    bookPage: {{ $bookPage }}
     <!-- for loop -->
     <ul>
     @for($i = 0; $i < count($people); $i++)

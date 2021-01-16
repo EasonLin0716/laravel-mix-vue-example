@@ -23,7 +23,8 @@ Route::get('/helloworld', function () {
         ['name' => 'Jane', 'age' => '15', 'sex' => 'F'],
         ['name' => 'Joseph', 'age' => '19', 'sex' => 'M'],
     ];
-    return view('helloworld', ['people' => $people]);
+
+    return view('helloworld', ['people' => $people, 'bookPage' => request('bookpage')]);
 });
 
 Route::get('/helloworld2', function () {
