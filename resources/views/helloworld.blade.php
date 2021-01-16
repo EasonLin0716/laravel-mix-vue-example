@@ -12,30 +12,30 @@
   <body>
     <div id="app">
     </div>
-    <p>{{ $name1 }} - {{ $age1 }} - {{ $sex1 }}</p>
-    @if($sex1 == 'M')
-      <p>He is a man</p>
-    @elseif($sex1 == 'F')
-      <p>He is a woman</p>
-    @endif
-    <!-- unless = if(falsy) then ... -->
-    @unless($age1 > 13)
-      <p>This person is under 13</p>
-    @endunless
-    <p>{{ $name2 }} - {{ $age2 }} - {{ $sex2 }}</p>
-    @if($sex2 == 'M')
-      <p>He is a man</p>
-    @elseif($sex2 == 'F')
-      <p>She is a woman</p>
-    @endif
-    @unless($age2 > 13)
-      <p>This person is under 13</p>
-    @endunless
-    <!-- some regular php -->
-    @php
-      $animal = 'dog';
-      echo($animal);
-    @endphp
+    <!-- for loop -->
+    <ul>
+    @for($i = 0; $i < count($people); $i++)
+      <li>Name: {{ $people[$i]['name'] }} | Age: {{ $people[$i]['age'] }} | Sex: 
+      @if($people[$i]['sex'] == 'M')
+        男
+      @else
+        女
+      @endif
+      </li>
+    @endfor
+    </ul>
+    <!-- foreach -->
+    <div>
+      @foreach($people as $person)
+        @if($loop->first)
+          <p>---Start---</p>
+        @endif
+        {{ $loop->index }} Name: {{ $person['name'] }} <br/>
+        @if($loop->last)
+          <p>---End---</p>
+        @endif
+      @endforeach
+    </div>
     <script src="{{ mix('js/app.js') }}"></script>
   </body>
 </html>
