@@ -25,3 +25,7 @@ Route::get('/helloworld', function () {
     ];
     return view('helloworld', ['people' => $people]);
 });
+
+Route::get('/helloworld2', function () {
+    return view('helloworld2');
+});
