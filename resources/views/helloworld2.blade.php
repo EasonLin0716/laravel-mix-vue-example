@@ -5,4 +5,5 @@
 
 @section('content2')
 <h1>Hello here is section content2</h1>
+<img src="/img/tim-and-eric-mind-blown.gif" alt="" />
 @endsection
