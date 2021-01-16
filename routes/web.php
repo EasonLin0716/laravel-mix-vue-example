@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/helloworld', function () {
-    return view('helloworld');
+    $people = ['name1' => 'John', 'age1' => '12', 'sex1' => 'M', 'name2' => 'Jane', 'age2' => '15', 'sex2' => 'F'];
+    return view('helloworld', $people); // ['key' => 'value', ...]
 });
