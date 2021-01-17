@@ -17,15 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/helloworld', function () {
-    $people = [
-        ['name' => 'John', 'age' => '12', 'sex' => 'M'],
-        ['name' => 'Jane', 'age' => '15', 'sex' => 'F'],
-        ['name' => 'Joseph', 'age' => '19', 'sex' => 'M'],
-    ];
+Route::get('/helloworld', 'App\Http\Controllers\HelloController@index');
 
-    return view('helloworld', ['people' => $people, 'bookPage' => request('bookpage')]);
-});
+Route::get('/helloworld/{id}', 'App\Http\Controllers\HelloController@show');
 
 Route::get('/helloworld2', function () {
     return view('helloworld2');
