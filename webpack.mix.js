@@ -19,6 +19,10 @@ mix
   .js("resources/js/index.js", "public/js")
   .vue()
   .version();
+mix
+  .js("resources/js/helloWorldDetail.js", "public/js")
+  .vue()
+  .version();
 mix.postCss("resources/css/app.css", "public/css", [
   //
 ]);
