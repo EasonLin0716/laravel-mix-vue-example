@@ -20,8 +20,11 @@ export default {
     return { form: { name: "", age: null, gender: "M" } };
   },
   methods: {
-    onSubmit() {
-      alert("submit");
+    async onSubmit() {
+      const { data } = await axios.post("/friends", this.form);
+      if (data.status === "OK") {
+        location.href = "/friends";
+      }
     }
   }
 };

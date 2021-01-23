@@ -24,4 +24,17 @@ class FriendController extends Controller
     public function create() {
         return view('friends.create');
     }
+
+    public function store() {
+
+        $friend = new Friend();
+
+        $friend->name = request('name');
+        $friend->age = request('age');
+        $friend->gender = request('gender');
+
+        $friend->save();
+        
+        return response()->json(['status'=>'OK', 'message'=>'success'], 201);
+    }
 }

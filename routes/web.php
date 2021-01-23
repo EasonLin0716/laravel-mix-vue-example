@@ -21,6 +21,8 @@ Route::get('/friends', 'App\Http\Controllers\FriendController@index');
 
 Route::get('/friends/create', 'App\Http\Controllers\FriendController@create');
 
+Route::post('/friends', 'App\Http\Controllers\FriendController@store');
+
 Route::get('/friends/{id}', 'App\Http\Controllers\FriendController@show');
 
 Route::get('/helloworld2', function () {
