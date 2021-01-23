@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\FriendList;
 
 class HelloController extends Controller
 {
     public function index() {
-        $people = [
-            ['name' => 'John', 'age' => '12', 'sex' => 'M'],
-            ['name' => 'Jane', 'age' => '15', 'sex' => 'F'],
-            ['name' => 'Joseph', 'age' => '19', 'sex' => 'M'],
-        ];
+        
+        $friendList = FriendList::orderBy('gender')->get();
 
-        return view('helloworld', ['people' => $people, 'bookPage' => request('bookpage')]);
+        return view('helloworld', ['people' => $friendList, 'bookPage' => request('bookpage')]);
     }
 
     public function show($id) {
