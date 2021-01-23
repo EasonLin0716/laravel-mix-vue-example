@@ -4,6 +4,5 @@ import HelloWorld from "../components/HelloWorld";
 
 new Vue({
   el: "#app",
-  template: "<HelloWorld></HelloWorld>",
-  components: { HelloWorld },
+  render: h => h(HelloWorld)
 });

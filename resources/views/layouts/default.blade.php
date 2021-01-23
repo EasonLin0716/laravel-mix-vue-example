@@ -12,10 +12,12 @@
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div id="layout" class="wrapper">
+    <app-header></app-header>
     @yield('content')
-    <p>-------------</p>
-    @yield('content2')
+    <app-footer></app-footer>
   </div>
+  <script src="{{ mix('js/layout.js') }}"></script>
+  @yield('vue-app')
 </body>
 </html>

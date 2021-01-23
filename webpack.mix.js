@@ -27,6 +27,10 @@ mix
   .js("resources/js/friendForm.js", "public/js")
   .vue()
   .version();
+mix
+  .js("resources/js/layout.js", "public/js")
+  .vue()
+  .version();
 mix.postCss("resources/css/app.css", "public/css", [
   //
 ]);

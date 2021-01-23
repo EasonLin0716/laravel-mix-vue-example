@@ -1,9 +1,8 @@
 @extends('layouts.default')
 @section('content')
 <h1>Hello This page use default.blade.php</h1>
+<div id="app"></div>
 @endsection
-
-@section('content2')
-<h1>Hello here is section content2</h1>
-<img src="/img/tim-and-eric-mind-blown.gif" alt="" />
+@section('vue-app')
+<script src="{{ mix('js/app.js') }}"></script>
 @endsection
