@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/friends', 'App\Http\Controllers\FriendsController@index');
+Route::get('/friends', 'App\Http\Controllers\FriendController@index');
 
-Route::get('/friend/{id}', 'App\Http\Controllers\FriendsController@show');
+Route::get('/friends/create', 'App\Http\Controllers\FriendController@create');
+
+Route::get('/friends/{id}', 'App\Http\Controllers\FriendController@show');
 
 Route::get('/helloworld2', function () {
     return view('helloworld2');

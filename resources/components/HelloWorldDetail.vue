@@ -1,7 +1,9 @@
 <template>
   <div id="hello-world-detail">
     <h1>Aloha</h1>
-    {{ articleId }}
+    <p>{{ friend.name }}</p>
+    <p>{{ friend.mobile }}</p>
+    <p>{{ friend.gender }}</p>
   </div>
 </template>
 
@@ -9,9 +11,9 @@
 export default {
   name: "HelloWorldDetail",
   props: {
-    articleId: {
-      type: Number,
-      default: 0
+    friend: {
+      type: Object,
+      default: () => {}
     }
   }
 };

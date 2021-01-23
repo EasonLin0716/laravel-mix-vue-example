@@ -1852,12 +1852,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "HelloWorldDetail",
   props: {
-    articleId: {
-      type: Number,
-      "default": 0
+    friend: {
+      type: Object,
+      "default": function _default() {}
     }
   }
 });
@@ -19364,7 +19366,12 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "hello-world-detail" } }, [
     _c("h1", [_vm._v("Aloha")]),
-    _vm._v("\n  " + _vm._s(_vm.articleId) + "\n")
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.friend.name))]),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.friend.mobile))]),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.friend.gender))])
   ])
 }
 var staticRenderFns = []
