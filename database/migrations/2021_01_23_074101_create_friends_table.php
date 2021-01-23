@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddMobileToFriendlistTable extends Migration
+class CreateFriendsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddMobileToFriendlistTable extends Migration
      */
     public function up()
     {
-        Schema::table('friendlist', function (Blueprint $table) {
-            $table->string('mobile');
+        Schema::create('friends', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->string('name');
+            $table->string('age');
+            $table->string('gender');
         });
     }
 
@@ -25,8 +29,6 @@ class AddMobileToFriendlistTable extends Migration
      */
     public function down()
     {
-        Schema::table('friendlist', function (Blueprint $table) {
-            $table->dropColumn('mobile');
-        });
+        Schema::dropIfExists('friends');
     }
 }

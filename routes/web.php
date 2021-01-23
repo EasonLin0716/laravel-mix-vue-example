@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/helloworld', 'App\Http\Controllers\HelloController@index');
+Route::get('/friends', 'App\Http\Controllers\FriendsController@index');
 
-Route::get('/helloworld/{id}', 'App\Http\Controllers\HelloController@show');
+Route::get('/friend/{id}', 'App\Http\Controllers\FriendsController@show');
 
 Route::get('/helloworld2', function () {
     return view('helloworld2');
