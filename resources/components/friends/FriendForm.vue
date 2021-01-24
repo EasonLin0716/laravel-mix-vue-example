@@ -4,6 +4,8 @@
     <input v-model="form.name" type="text" id="name" /><br />
     <label for="age">Age</label>
     <input v-model="form.age" type="number" id="age" /><br />
+    <label for="name">Mobile</label>
+    <input v-model="form.mobile" type="text" id="mobile" /><br />
     <label for="gender">Gender</label>
     <select v-model="form.gender" id="gender">
       <option value="M">男</option>
@@ -34,7 +36,9 @@
 export default {
   name: "FriendForm",
   data() {
-    return { form: { name: "", age: null, gender: "M", hobbies: [] } };
+    return {
+      form: { name: "", age: null, gender: "M", hobbies: [], mobile: "" }
+    };
   },
   methods: {
     async onSubmit() {

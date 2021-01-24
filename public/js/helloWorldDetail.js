@@ -1854,12 +1854,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "HelloWorldDetail",
   props: {
     friend: {
       type: Object,
       "default": function _default() {}
+    }
+  },
+  computed: {
+    hobbies: function hobbies() {
+      return JSON.parse(this.friend.hobbies) || [];
     }
   }
 });
@@ -19575,14 +19583,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "hello-world-detail" } }, [
-    _c("h1", [_vm._v("Aloha")]),
-    _vm._v(" "),
+  return _c("div", [
     _c("p", [_vm._v(_vm._s(_vm.friend.name))]),
     _vm._v(" "),
     _c("p", [_vm._v(_vm._s(_vm.friend.mobile))]),
     _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.friend.gender))])
+    _c("p", [_vm._v(_vm._s(_vm.friend.gender))]),
+    _vm._v(" "),
+    _c("p", [_vm._v("hobbies")]),
+    _vm._v(" "),
+    _c(
+      "ol",
+      _vm._l(_vm.hobbies, function(hobby, index) {
+        return _c("li", { key: index }, [_vm._v(_vm._s(hobby))])
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = []

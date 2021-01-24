@@ -31,8 +31,9 @@ class FriendController extends Controller
 
         $friend->name = request('name');
         $friend->age = request('age');
+        $friend->mobile = request('mobile');
         $friend->gender = request('gender');
-        $friend->hobbies = request('hobbies');
+        $friend->hobbies = json_encode(request('hobbies'));
 
         $friend->save();
         

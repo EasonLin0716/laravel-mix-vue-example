@@ -1,9 +1,12 @@
 <template>
-  <div id="hello-world-detail">
-    <h1>Aloha</h1>
+  <div>
     <p>{{ friend.name }}</p>
     <p>{{ friend.mobile }}</p>
     <p>{{ friend.gender }}</p>
+    <p>hobbies</p>
+    <ol>
+      <li v-for="(hobby, index) in hobbies" :key="index">{{ hobby }}</li>
+    </ol>
   </div>
 </template>
 
@@ -14,6 +17,11 @@ export default {
     friend: {
       type: Object,
       default: () => {}
+    }
+  },
+  computed: {
+    hobbies() {
+      return JSON.parse(this.friend.hobbies) || [];
     }
   }
 };

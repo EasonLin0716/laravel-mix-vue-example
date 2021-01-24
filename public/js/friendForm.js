@@ -1896,6 +1896,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "FriendForm",
   data: function data() {
@@ -1904,7 +1906,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         name: "",
         age: null,
         gender: "M",
-        hobbies: []
+        hobbies: [],
+        mobile: ""
       }
     };
   },
@@ -20454,6 +20457,30 @@ var render = function() {
             return
           }
           _vm.$set(_vm.form, "age", $event.target.value)
+        }
+      }
+    }),
+    _c("br"),
+    _vm._v(" "),
+    _c("label", { attrs: { for: "name" } }, [_vm._v("Mobile")]),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.form.mobile,
+          expression: "form.mobile"
+        }
+      ],
+      attrs: { type: "text", id: "mobile" },
+      domProps: { value: _vm.form.mobile },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.form, "mobile", $event.target.value)
         }
       }
     }),
