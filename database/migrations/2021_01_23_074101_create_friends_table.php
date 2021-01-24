@@ -19,6 +19,7 @@ class CreateFriendsTable extends Migration
             $table->string('name');
             $table->string('age');
             $table->string('gender');
+            $table->json('hobbies');
         });
     }
 

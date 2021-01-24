@@ -1,8 +1,10 @@
 require("./bootstrap");
 import Vue from "vue";
+import layout from "./layout";
+layout(Vue);
 import HelloWorldDetail from "../components/HelloWorldDetail";
-Vue.component("hello-world-detail", HelloWorldDetail);
+Vue.component("app-main", HelloWorldDetail);
 
 new Vue({
-  el: "#hello-world-detail"
+  el: "#layout"
 });

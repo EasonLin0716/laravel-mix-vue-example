@@ -1,6 +1,7 @@
 @extends('layouts.default')
 @section('content')
-<h1>Create</h1>
-<div id="friend-form"></div>
+<app-main></app-main>
+@endsection
+@section('vue-app')
 <script src="{{ mix('js/friendForm.js') }}"></script>
 @endsection

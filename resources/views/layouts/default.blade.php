@@ -17,7 +17,6 @@
     @yield('content')
     <app-footer></app-footer>
   </div>
-  <script src="{{ mix('js/layout.js') }}"></script>
   @yield('vue-app')
 </body>
 </html>

@@ -9,6 +9,23 @@
       <option value="M">男</option>
       <option value="F">女</option> </select
     ><br />
+    <input
+      type="checkbox"
+      id="swimming"
+      value="swimming"
+      v-model="form.hobbies"
+    />
+    <label for="swimming">swimming</label>
+    <input
+      type="checkbox"
+      id="reading"
+      value="reading"
+      v-model="form.hobbies"
+    />
+    <label for="reading">reading</label>
+    <input type="checkbox" id="coding" value="coding" v-model="form.hobbies" />
+    <label for="coding">coding</label>
+    <br />
     <button @click="onSubmit">Submit</button>
   </div>
 </template>
@@ -17,7 +34,7 @@
 export default {
   name: "FriendForm",
   data() {
-    return { form: { name: "", age: null, gender: "M" } };
+    return { form: { name: "", age: null, gender: "M", hobbies: [] } };
   },
   methods: {
     async onSubmit() {

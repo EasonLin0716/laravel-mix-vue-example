@@ -32,6 +32,7 @@ class FriendController extends Controller
         $friend->name = request('name');
         $friend->age = request('age');
         $friend->gender = request('gender');
+        $friend->hobbies = request('hobbies');
 
         $friend->save();
         
