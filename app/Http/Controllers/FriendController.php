@@ -39,4 +39,11 @@ class FriendController extends Controller
         
         return response()->json(['status'=>'OK', 'message'=>'success'], 201);
     }
+
+    public function destroy($id) {
+        $friend = Friend::findOrFail($id);
+        $friend->delete();
+
+        return response()->json(['status'=>'OK', 'message'=>'success'], 201);
+    }
 }

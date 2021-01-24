@@ -25,6 +25,8 @@ Route::post('/friends', 'App\Http\Controllers\FriendController@store');
 
 Route::get('/friends/{id}', 'App\Http\Controllers\FriendController@show');
 
+Route::delete('/friends/{id}', 'App\Http\Controllers\FriendController@destroy');
+
 Route::get('/helloworld2', function () {
     return view('helloworld2');
 });
