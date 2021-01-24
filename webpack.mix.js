@@ -20,7 +20,7 @@ mix
   .vue()
   .version();
 mix
-  .js("resources/js/helloWorldDetail.js", "public/js")
+  .js("resources/js/friend.js", "public/js")
   .vue()
   .version();
 mix

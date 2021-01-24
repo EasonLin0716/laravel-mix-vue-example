@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "HelloWorldDetail",
+  name: "Friend",
   props: {
     friend: {
       type: Object,
